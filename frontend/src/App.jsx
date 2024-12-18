@@ -13,7 +13,7 @@ export default function App() {
 
   const getData = async () => {
     try {
-      const response = await axios.get('http://localhost:8073/api/data');
+      const response = await axios.get('https://todo-list-interviewbuddy.onrender.com/api/data');
       console.log('Fetched data:', response.data);
       setToDos(response.data);
     } catch (error) {
@@ -31,7 +31,7 @@ export default function App() {
     const x = task.charAt(0).toUpperCase() + task.slice(1);
 
       try{
-        await axios.post('http://localhost:8073/addTask', { x });
+        await axios.post('https://todo-list-interviewbuddy.onrender.com/addTask', { x });
         setTask('');
         getData();
       } catch (error) {
@@ -41,7 +41,7 @@ export default function App() {
 
   const deleteRecord = async (refId) => {
     try {
-      const response = await axios.delete(`http://localhost:8073/deleteTask/${refId}`);
+      const response = await axios.delete(`https://todo-list-interviewbuddy.onrender.com/deleteTask/${refId}`);
       console.log('Delete response:', response.data); 
       getData(); 
     } catch (error) {
@@ -51,7 +51,7 @@ export default function App() {
 
   const updateRecord = async (id) => {
     try {
-      await axios.put(`http://localhost:8073/updateTask/${id}`, {
+      await axios.put(`https://todo-list-interviewbuddy.onrender.com/updateTask/${id}`, {
         description: newDescription,
       });
       setEditId(null);
