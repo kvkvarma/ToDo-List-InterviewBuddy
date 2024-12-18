@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const { createClient } = require('@supabase/supabase-js');
-const port = 8073;  
+const port = process.env.port || 8073;  
 require('dotenv').config();
 const { v4: uuidv4 } = require('uuid'); 
 const cors = require('cors');
@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send("Hii, Hello There.......")
-});
+}); 
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;

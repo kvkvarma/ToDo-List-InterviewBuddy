@@ -27,7 +27,7 @@ dist-ssr
 
 #Environment variables
 backend/.env
-backend/.env.local
+backend/.env.local  
 backend/.env.*.local
 
 # Dependencies
