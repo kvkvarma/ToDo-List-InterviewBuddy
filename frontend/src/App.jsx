@@ -68,6 +68,7 @@ export default function App() {
       <input
         type="text"
         value={task}
+        style={{color:'white'}}
         onChange={(e) => setTask(e.target.value)}
         required
         placeholder="Add a new task"
