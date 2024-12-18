@@ -87,6 +87,11 @@ body {
   width: 80%; 
 }
 
+@media (min-width:700px){
+  .todo-container{
+    width:700;
+  }
+}
 @media (max-width: 600px) {
   .todo-form {
     flex-direction: column;
